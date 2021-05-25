@@ -7,6 +7,9 @@ public class Pizza extends Goods {
 
     private String ingredients;
 
+    public Pizza() {
+    }
+
     public Pizza(String name, NutritionFacts nutritionFacts, double cost,
                  int quantity, int weight, int diameter, String ingredients) {
         super(name, nutritionFacts, cost, quantity);

@@ -10,6 +10,9 @@ public class Order {
 
     private Payment payment;
 
+    public Order() {
+    }
+
     public Order(Cart cart, Customer customer, Payment payment) {
         this.cart = cart;
         this.customer = customer;

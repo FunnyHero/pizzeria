@@ -9,6 +9,9 @@ public class Payment {
 
     private PaymentType paymentType;
 
+    public Payment() {
+    }
+
     public Payment(BigDecimal amount, Currency currency, PaymentType paymentType) {
         this.amount = amount;
         this.currency = currency;

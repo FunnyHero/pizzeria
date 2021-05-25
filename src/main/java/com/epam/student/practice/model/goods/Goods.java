@@ -9,6 +9,9 @@ public abstract class Goods {
 
     private int quantity;
 
+    public Goods() {
+    }
+
     public Goods(String name, NutritionFacts nutritionFacts, double cost, int quantity) {
         this.name = name;
         this.nutritionFacts = nutritionFacts;

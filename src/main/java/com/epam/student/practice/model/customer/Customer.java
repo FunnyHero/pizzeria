@@ -7,6 +7,9 @@ public class Customer {
 
     private Address address;
 
+    public Customer() {
+    }
+
     public Customer(String name, String phone, Address address) {
         this.name = name;
         this.phone = phone;

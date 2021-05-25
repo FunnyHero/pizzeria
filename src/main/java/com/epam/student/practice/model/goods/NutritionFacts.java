@@ -9,6 +9,9 @@ public class NutritionFacts {
 
     private double carbohydrates;
 
+    public NutritionFacts() {
+    }
+
     public NutritionFacts(double calories, double protein, double fat, double carbohydrates) {
         this.calories = calories;
         this.protein = protein;
