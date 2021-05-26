@@ -4,12 +4,19 @@ import com.epam.student.practice.model.goods.Drink;
 import com.epam.student.practice.model.goods.Goods;
 import com.epam.student.practice.model.goods.Pizza;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cart {
     private List<Goods> goodsList;
 
     public Cart() {
+        this.goodsList = new ArrayList<>();
+    }
+
+    public Cart(Goods goods) {
+        this.goodsList = new ArrayList<>();
+        this.goodsList.add(goods);
     }
 
     public Cart(List<Goods> goodsList) {
