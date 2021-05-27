@@ -1,6 +1,10 @@
 package com.epam.student.practice.model.goods;
 
+import java.util.UUID;
+
 public abstract class Goods {
+    private UUID id;
+
     private String name;
 
     private NutritionFacts nutritionFacts;
@@ -17,6 +21,22 @@ public abstract class Goods {
         this.nutritionFacts = nutritionFacts;
         this.cost = cost;
         this.quantity = quantity;
+    }
+
+    public Goods(UUID id, String name, NutritionFacts nutritionFacts, double cost, int quantity) {
+        this.id = id;
+        this.name = name;
+        this.nutritionFacts = nutritionFacts;
+        this.cost = cost;
+        this.quantity = quantity;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     public String getName() {

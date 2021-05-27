@@ -1,5 +1,7 @@
 package com.epam.student.practice.model.goods;
 
+import java.util.UUID;
+
 public class Pizza extends Goods {
     private int weight;
 
@@ -13,6 +15,14 @@ public class Pizza extends Goods {
     public Pizza(String name, NutritionFacts nutritionFacts, double cost,
                  int quantity, int weight, int diameter, String ingredients) {
         super(name, nutritionFacts, cost, quantity);
+        this.weight = weight;
+        this.diameter = diameter;
+        this.ingredients = ingredients;
+    }
+
+    public Pizza(UUID id, String name, NutritionFacts nutritionFacts,
+                 double cost, int quantity, int weight, int diameter, String ingredients) {
+        super(id, name, nutritionFacts, cost, quantity);
         this.weight = weight;
         this.diameter = diameter;
         this.ingredients = ingredients;
