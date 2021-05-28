@@ -41,6 +41,8 @@ public final class Repository {
     }
 
     private Repository() {
+        goodsList = new ArrayList<Goods>();
+        orderList = new ArrayList<Order>();
         initGoodsList();
     }
 

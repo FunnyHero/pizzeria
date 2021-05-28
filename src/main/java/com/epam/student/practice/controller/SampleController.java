@@ -11,6 +11,7 @@ import com.epam.student.practice.model.goods.Goods;
 import com.epam.student.practice.model.payment.Payment;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.UUID;
 
@@ -29,7 +30,7 @@ public class SampleController {
 
     @GetMapping("/getMenu")
     public Collection<MenuDTO> getMenu() {
-        Collection<MenuDTO> menuDTO = null;
+        Collection<MenuDTO> menuDTO = new ArrayList<>();
 
         for (Goods goods : Repository.getInstance().findAllGoods()) {
             menuDTO.add(new MenuDTO(goods.getId(), goods.getName(), goods.getCost()));
@@ -48,7 +49,7 @@ public class SampleController {
             cart.addGoods(goods);
         }
 
-        if (cart.isLessThanFivePizzas() && cart.isLessThanFourDrinks()) {
+        if (cart.isLessThanSixPizzas() && cart.isLessThanFiveDrinks()) {
             return new DeliveryDTO(Repository.getInstance().createOrder(new Order(cart, null, null)));
         }
 
