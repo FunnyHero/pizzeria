@@ -35,28 +35,28 @@ public class Cart {
         this.goodsList.add(goods);
     }
 
-    public boolean isLessThanFivePizzas(){
+    public boolean isLessThanSixPizzas(){
         int pizzasCounter = 0;
 
         for (Goods goods : goodsList) {
             if (goods instanceof Pizza){
-                pizzasCounter++;
+                pizzasCounter += goods.getQuantity();
             }
         }
 
-        return pizzasCounter < 5;
+        return pizzasCounter < 6;
     }
 
-    public boolean isLessThanFourDrinks(){
+    public boolean isLessThanFiveDrinks(){
         int drinksCounter = 0;
 
         for (Goods goods : goodsList) {
             if (goods instanceof Drink){
-                drinksCounter++;
+                drinksCounter += goods.getQuantity();
             }
         }
 
-        return drinksCounter < 4;
+        return drinksCounter < 5;
     }
 
     public double getTotalCost(){
