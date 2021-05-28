@@ -1,7 +1,6 @@
 package com.epam.student.practice.dao;
 
 import com.epam.student.practice.model.Order;
-import com.epam.student.practice.model.customer.Customer;
 import com.epam.student.practice.model.goods.Drink;
 import com.epam.student.practice.model.goods.Goods;
 import com.epam.student.practice.model.goods.NutritionFacts;
@@ -56,7 +55,7 @@ public final class Repository {
         return goodsList;
     }
 
-    public Collection<Goods> findByName(String s) {
+    public Collection<Goods> findGoodsByName(String s) {
         Collection<Goods> filteredByName = new ArrayList<>();
 
         goodsList.forEach(goods -> {
@@ -67,13 +66,17 @@ public final class Repository {
         return filteredByName;
     }
 
-    public Goods findById(UUID id){
+    public Goods findGoodsById(UUID id){
         return goodsList.stream().filter(goods -> goods.getId().equals(id)).findFirst().orElse(null);
     }
 
+    public Order findOrderById(UUID id){
+        return orderList.stream().filter(order -> order.getId().equals(id)).findFirst().orElse(null);
+    }
+
     public UUID createOrder(Order order){
-        order.setUuid(UUID.randomUUID());
+        order.setId(UUID.randomUUID());
         orderList.add(order);
-        return order.getUuid();
+        return order.getId();
     }
 }

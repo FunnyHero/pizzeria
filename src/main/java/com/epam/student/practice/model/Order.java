@@ -6,7 +6,7 @@ import com.epam.student.practice.model.payment.Payment;
 import java.util.UUID;
 
 public class Order {
-    private UUID uuid;
+    private UUID id;
 
     private Cart cart;
 
@@ -23,12 +23,12 @@ public class Order {
         this.payment = payment;
     }
 
-    public UUID getUuid() {
-        return uuid;
+    public UUID getId() {
+        return id;
     }
 
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     public Cart getCart() {
