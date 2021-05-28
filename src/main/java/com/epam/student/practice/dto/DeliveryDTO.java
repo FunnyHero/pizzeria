@@ -9,6 +9,9 @@ public class DeliveryDTO {
         this.orderID = orderID;
     }
 
+    public DeliveryDTO() {
+    }
+
     public UUID getOrderID() {
         return orderID;
     }

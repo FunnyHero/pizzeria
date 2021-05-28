@@ -12,6 +12,9 @@ public class OrderDTO {
         this.quantity = quantity;
     }
 
+    public OrderDTO() {
+    }
+
     public UUID getGoodsID() {
         return goodsID;
     }

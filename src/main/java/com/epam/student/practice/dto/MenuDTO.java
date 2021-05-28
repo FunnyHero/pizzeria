@@ -15,6 +15,9 @@ public class MenuDTO {
         this.cost = cost;
     }
 
+    public MenuDTO() {
+    }
+
     public UUID getGoodsID() {
         return goodsID;
     }
